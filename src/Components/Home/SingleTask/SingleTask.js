@@ -4,7 +4,6 @@ const SingleTask = ({ todo, refetch }) => {
     const { _id, inputText } = todo;
 
     const handleComplete = (id) => {
-
         fetch(`http://localhost:5000/todo/${id}`, {
             method: 'DELETE',
             headers: {
@@ -17,7 +16,6 @@ const SingleTask = ({ todo, refetch }) => {
                 console.log(data)
                 refetch()
             })
-
 
         const complete = { completeTask: inputText }
         fetch('http://localhost:5000/complete', {
