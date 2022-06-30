@@ -9,11 +9,12 @@ import Home from './Components/Home/Home/Home';
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <Header></Header>
+
       <Routes>
-        <Route path='/todo' element={<Todo></Todo>}></Route>
         <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/todo' element={<Todo></Todo>}></Route>
         <Route path='/completed' element={<Completed></Completed>}></Route>
         <Route path='/calender' element={<Calender></Calender>}></Route>
       </Routes>
