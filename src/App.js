@@ -6,6 +6,8 @@ import Todo from './Components/ToDo/Todo';
 import Completed from './Components/Completed/Completed';
 import Calender from './Components/Calender/Calender';
 import Home from './Components/Home/Home/Home';
+import Footer from './Components/Footer/Footer';
+
 import { ToastContainer, toast } from 'react-toastify';
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
         <Route path='/completed' element={<Completed></Completed>}></Route>
         <Route path='/calender' element={<Calender></Calender>}></Route>
       </Routes>
+
+      <Footer></Footer>
       <ToastContainer></ToastContainer>
 
     </div >

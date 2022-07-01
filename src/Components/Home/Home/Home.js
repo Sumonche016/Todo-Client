@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useQuery } from 'react-query'
 
 import SingleTask from '../SingleTask/SingleTask';
+import GetTouch from '../GetTouch/GetTouch';
 
 const Home = () => {
 
@@ -68,14 +69,14 @@ const Home = () => {
     }
 
     return (
-        <div className='bg-[#222222] h-screen'>
+        <div className='bg-[#222222] '>
 
             <div className='md:w-1/2 w-full mx-auto pt-[8rem]'>
                 <h1 className='md:text-[2.5rem] text-[1.9rem] text-white text-center font-semibold'>TODO LIST APP</h1>
 
                 <form action="" className='md:w-[50%] flex  w-[96%] mx-auto mt-10' onSubmit={handleSubmit}>
                     <input ref={inputRef} className='outline-0 Md:w-[80%] w-full px-5 py-1.5 text-[#222222] text-left sm:w-72"' type="text" />
-                    <button type='submit' className=' text-white px-5 py-1.5 bg-[#1c94d9] duration-150 cursor-pointer hover:bg-[#0081e7]'>Add</button>
+                    <button type='submit' className=' text-white px-5 py-1.5 bg-[#e31658] duration-150 cursor-pointer hover:bg-[#0081e7]'>Add</button>
                 </form>
                 <div className='mt-10 flex flex-col items-center'>
                     {
@@ -88,11 +89,8 @@ const Home = () => {
 
 
 
-            {/* {
-                task?.map(todo => <li className='text-white' key={todo._id}>{todo.inputText} <button onClick={() => handleDelete(todo._id)} className="btn btn-xs">Delete</button> <label for="my-modal-6" className="btn modal-button">open modal</label>
-                </li>)
-            }
-            <Modal></Modal> */}
+            <GetTouch></GetTouch>
+
         </div>
     );
 };
