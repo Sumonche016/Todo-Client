@@ -4,7 +4,7 @@ import SingleCompleted from './SingleCompleted/SingleCompleted';
 
 const Completed = () => {
     const { isLoading, data, refetch } = useQuery('repoData', () =>
-        fetch('http://localhost:5000/complete', {
+        fetch('https://young-sea-11778.herokuapp.com/complete', {
             method: 'GET'
         }).then(res =>
             res.json()

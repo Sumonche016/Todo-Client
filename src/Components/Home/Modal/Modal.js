@@ -17,7 +17,7 @@ const Modal = (props) => {
         props?.setShow(false)
         if (updateValue) {
 
-            fetch(`http://localhost:5000/update/${props?.id}`, {
+            fetch(`https://young-sea-11778.herokuapp.com/update/${props?.id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

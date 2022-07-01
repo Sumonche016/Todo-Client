@@ -4,7 +4,7 @@ const SingleCompleted = ({ complete, refetch }) => {
     const { completeTask, _id } = complete
 
     const handledelete = (id) => {
-        fetch(`http://localhost:5000/complete/${id}`, {
+        fetch(`https://young-sea-11778.herokuapp.com/complete/${id}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json'

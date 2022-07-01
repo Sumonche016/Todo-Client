@@ -5,7 +5,7 @@ import SingleTask from '../Home/SingleTask/SingleTask';
 const Todo = () => {
 
     const { data: task, refetch } = useQuery('repoData', () =>
-        fetch('http://localhost:5000/todo', {
+        fetch('https://young-sea-11778.herokuapp.com/todo', {
             method: 'GET'
         }).then(res =>
             res.json()

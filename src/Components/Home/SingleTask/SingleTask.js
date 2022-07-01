@@ -5,7 +5,7 @@ const SingleTask = ({ todo, refetch }) => {
     const { _id, inputText } = todo;
     const [show, setShow] = useState(true)
     const handleComplete = (id) => {
-        fetch(`http://localhost:5000/todo/${id}`, {
+        fetch(`https://young-sea-11778.herokuapp.com/todo/${id}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json'
@@ -19,7 +19,7 @@ const SingleTask = ({ todo, refetch }) => {
             })
 
         const complete = { completeTask: inputText }
-        fetch('http://localhost:5000/complete', {
+        fetch('https://young-sea-11778.herokuapp.com/complete', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

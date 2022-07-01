@@ -11,7 +11,7 @@ const Home = () => {
 
 
     const { data: task, refetch } = useQuery('repoData', () =>
-        fetch('http://localhost:5000/todo', {
+        fetch('https://young-sea-11778.herokuapp.com/todo', {
             method: 'GET'
         }).then(res =>
             res.json()
@@ -20,7 +20,7 @@ const Home = () => {
 
 
     // const handleDelete = (id) => {
-    //     fetch(`http://localhost:5000/todo/${id}`, {
+    //     fetch(`https://young-sea-11778.herokuapp.com/todo/${id}`, {
     //         method: 'DELETE',
     //         headers: {
     //             'content-type': 'application/json'
@@ -47,7 +47,7 @@ const Home = () => {
 
         if (inputValue) {
 
-            fetch('http://localhost:5000/todo', {
+            fetch('https://young-sea-11778.herokuapp.com/todo', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
