@@ -19,7 +19,7 @@ const SingleCompleted = ({ complete, refetch }) => {
     }
 
     return (
-        <div className='w-1/2 mx-auto'>
+        <div className='md:w-1/2 w-[90%] mx-auto'>
 
             <div className='w-[70%] bg-[#e31658] py-2 flex items-center justify-between mt-4 mx-auto'>
                 <p className='text-white pl-2'>{completeTask}</p>

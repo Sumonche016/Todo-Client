@@ -12,7 +12,7 @@ const Completed = () => {
     )
     return (
         <div className='bg-[#222222] h-screen'>
-            <h1 className='text-[2.5rem] text-white text-center font-semibold'>Completed Task Name</h1>
+            <h1 className='md:text-[2.5rem] text-[1.9rem] pt-[8rem] text-white text-center font-semibold'>Completed Task Name</h1>
 
             <div className='mt-12'>
                 {

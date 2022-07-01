@@ -40,13 +40,13 @@ const SingleTask = ({ todo, refetch }) => {
     }
 
     return (
-        <div className='w-[70%] bg-[#e31658] flex items-center justify-between mt-4'>
+        <div className='md:w-[70%] w-[90%] bg-[#e31658] flex items-center justify-between mt-4'>
             <p className='text-white pl-2'>{inputText}</p>
             {
                 show && <Modal refetch={refetch} setShow={setShow} text={inputText} id={_id}></Modal>
             }
             <div>
-                <label onClick={handleEdit} for="my-modal-6" class="btn modal-button">Edit</label>
+                <label onClick={handleEdit} for="my-modal-6" class="px-3 text-white mr-2 py-2 bg-[#e73422] duration-150 hover:bg-[#b01e15] modal-button">Edit</label>
                 <button onClick={() => handleComplete(_id)} className="px-3 py-2 bg-[#e73422] duration-150 hover:bg-[#b01e15] text-white">✓</button>
             </div>
 

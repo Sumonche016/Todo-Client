@@ -15,21 +15,23 @@ const Modal = (props) => {
 
         console.log(input)
         props?.setShow(false)
+        if (updateValue) {
 
-        fetch(`http://localhost:5000/update/${props?.id}`, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(input)
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.acknowledged == true) {
-                    toast('Sucessfully Update')
-                    props?.refetch()
-                }
+            fetch(`http://localhost:5000/update/${props?.id}`, {
+                method: 'PUT',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(input)
             })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.acknowledged == true) {
+                        toast('Sucessfully Update')
+                        props?.refetch()
+                    }
+                })
+        }
 
     }
 
