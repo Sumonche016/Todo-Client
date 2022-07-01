@@ -88,7 +88,7 @@ const Home = () => {
 
 
             {/* {
-                task?.map(todo => <li className='text-white' key={todo._id}>{todo.inputText} <button onClick={() => handleDelete(todo._id)} class="btn btn-xs">Delete</button> <label for="my-modal-6" class="btn modal-button">open modal</label>
+                task?.map(todo => <li className='text-white' key={todo._id}>{todo.inputText} <button onClick={() => handleDelete(todo._id)} className="btn btn-xs">Delete</button> <label for="my-modal-6" className="btn modal-button">open modal</label>
                 </li>)
             }
             <Modal></Modal> */}

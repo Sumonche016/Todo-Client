@@ -1,18 +1,55 @@
-import React from 'react';
+import React, { useRef } from 'react';
+
 
 const Modal = (props) => {
 
+    const updateInputref = useRef()
+
+    const handleUpdate = (event) => {
+        event.preventDefault()
+        const updateValue = updateInputref.current.value;
+        const input = {
+            inputText: updateValue,
+            id: props?.id
+        }
+
+        console.log(input)
+        props?.setShow(false)
+        // fetch(`http://localhost:5000/update/${props?.id}`, {
+        //     method: 'PUT',
+        //     headers: {
+        //         'content-type': 'application/json'
+        //     },
+        //     body: JSON.stringify(input)
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         if (data.acknowledged == true) {
+
+        //             toast('Sucessfully Update')
+
+        //         }
+        //     })
+
+    }
+
+
+
+
+
+
+
     return (
         <div>
-            <input type="checkbox" id="my-modal-6" class="modal-toggle" />
-            <div class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box">
+            <input type="checkbox" id="my-modal-6" className="modal-toggle" />
+            <div className="modal modal-bottom sm:modal-middle">
+                <div className="modal-box">
 
-                    <form action="">
-                        <input placeholder={props?.text} className='bg-black text-white' type="text" />
+                    <form action="" onSubmit={handleUpdate}>
 
-                        <label onClick={handleUpdate} for="my-modal-6" type='submit' class="btn">Yay!</label>
+                        <input ref={updateInputref} placeholder={props?.text} type="text" class="input input-bordered input-secondary w-full max-w-xs" />
 
+                        <button for="my-modal-6" type='submit' class="btn btn-secondary">Button</button>
                     </form>
 
 
