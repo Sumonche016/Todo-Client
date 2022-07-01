@@ -43,7 +43,7 @@ const SingleTask = ({ todo, refetch }) => {
         <div className='w-[70%] bg-[#e31658] flex items-center justify-between mt-4'>
             <p className='text-white pl-2'>{inputText}</p>
             {
-                show && <Modal setShow={setShow} text={inputText} id={_id}></Modal>
+                show && <Modal refetch={refetch} setShow={setShow} text={inputText} id={_id}></Modal>
             }
             <div>
                 <label onClick={handleEdit} for="my-modal-6" class="btn modal-button">Edit</label>

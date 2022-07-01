@@ -10,7 +10,7 @@ const Home = () => {
     const inputRef = useRef()
 
 
-    const { isLoading, data: task, refetch } = useQuery('repoData', () =>
+    const { data: task, refetch } = useQuery('repoData', () =>
         fetch('http://localhost:5000/todo', {
             method: 'GET'
         }).then(res =>
@@ -19,22 +19,22 @@ const Home = () => {
     )
 
 
-    const handleDelete = (id) => {
-        fetch(`http://localhost:5000/todo/${id}`, {
-            method: 'DELETE',
-            headers: {
-                'content-type': 'application/json'
-            },
+    // const handleDelete = (id) => {
+    //     fetch(`http://localhost:5000/todo/${id}`, {
+    //         method: 'DELETE',
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
 
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.acknowledged == true) {
-                    toast.success('successfully deleted')
-                    refetch()
-                }
-            })
-    }
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             if (data.acknowledged == true) {
+    //                 toast.success('successfully deleted')
+    //                 refetch()
+    //             }
+    //         })
+    // }
 
     const handleSubmit = (event) => {
 

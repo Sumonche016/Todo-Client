@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-
+import { toast } from 'react-toastify';
 
 const Modal = (props) => {
 
@@ -15,21 +15,21 @@ const Modal = (props) => {
 
         console.log(input)
         props?.setShow(false)
-        // fetch(`http://localhost:5000/update/${props?.id}`, {
-        //     method: 'PUT',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(input)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         if (data.acknowledged == true) {
 
-        //             toast('Sucessfully Update')
-
-        //         }
-        //     })
+        fetch(`http://localhost:5000/update/${props?.id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(input)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.acknowledged == true) {
+                    toast('Sucessfully Update')
+                    props?.refetch()
+                }
+            })
 
     }
 
